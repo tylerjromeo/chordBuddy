@@ -1,0 +1,6 @@
+{% extends "catalog/base.html" %}
+{% block content %}
+    {% for song in song_list %}
+        <div><a href="{% url 'song-detail' song.id %}">{{ song.title }}</a></div>
+    {% endfor %}
+{% endblock %}
