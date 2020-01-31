@@ -13,6 +13,9 @@ class Song(models.Model):
     chordpro_data = models.TextField()
     tags = models.ManyToManyField(Tag)
 
+    def __str__(self):
+        return self.title
+
 
 class Link(models.Model):
     class LinkType(models.TextChoices):
